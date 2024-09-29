@@ -1,0 +1,2 @@
+# OdooApps
+Public Odoo App
