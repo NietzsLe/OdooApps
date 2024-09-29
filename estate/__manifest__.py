@@ -1,5 +1,5 @@
 {
-    "name": "Real Estate Management",
+    "name": "NietzsLe's Real Estate",
     "depends": ["base"],
     "category": "Real Estate/Brokerage",
     "version": "1.0",
