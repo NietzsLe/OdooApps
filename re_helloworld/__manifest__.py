@@ -1,5 +1,5 @@
 {
-    "name": "NietzsLe's Real Estate",
+    "name": "RE Helloworld",
     "depends": ["base"],
     "category": "Real Estate/Brokerage",
     "version": "1.0",

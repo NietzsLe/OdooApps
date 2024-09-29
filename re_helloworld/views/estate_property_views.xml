@@ -59,7 +59,7 @@
                                     <field name="bedrooms"/>
                                     <field name="living_area" string="Living Area (sqm)"/>
                                     <field name="facades"/>
-                                    <field name="state" groups="estate.estate_group_property_employee"/>
+                                    <field name="state" groups="re_helloworld.estate_group_property_employee"/>
                                 </group>
                                 <group>
 
