@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="module_category_real_estate_brokerage">
+        <field name="name">Real Estate/Brokerage</field>
+        <field name="sequence">60</field>
+        <field name="visible" eval="0" />
+    </record>
+
+    <record id="estate_group_property_employee" model="res.groups">
+        <field name="name">Property Employee</field>
+        <field name="category_id" ref="module_category_real_estate_brokerage"/>
+    </record>
+
+    <record id="estate_group_property_manager" model="res.groups">
+        <field name="name">Property Manager</field>
+        <field name="category_id" ref="module_category_real_estate_brokerage"/>
+        <field name="implied_ids" eval="[(4, ref('estate_group_property_employee'))]"/>
+    </record>
+
+    <record id="estate_group_type_employee" model="res.groups">
+        <field name="name">Type Employee</field>
+        <field name="category_id" ref="module_category_real_estate_brokerage"/>
+    </record>
+
+    <record id="estate_group_type_manager" model="res.groups">
+        <field name="name">Type Manager</field>
+        <field name="category_id" ref="module_category_real_estate_brokerage"/>
+        <field name="implied_ids" eval="[(4, ref('estate_group_type_employee'))]"/>
+    </record>
+
+    <record id="prevent_property_colleagues_rule" model="ir.rule">
+        <field name="name">This rule allow colleagues only see</field>
+        <field name="model_id" ref="model_estate_property"/>
+        <field name="perm_read" eval="False"/>
+        <field name="groups" eval="[Command.link(ref('estate_group_property_employee'))]"/>
+        <field name="domain_force">[
+            '|', ('salesperson_id', '=', False),
+                 ('salesperson_id', '=', user.id)
+        ]</field>
+    </record>
+
+</odoo>

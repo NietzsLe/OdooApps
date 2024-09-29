@@ -1,0 +1,27 @@
+{
+    "name": "Real Estate Management",
+    "depends": ["base"],
+    "category": "Real Estate/Brokerage",
+    "version": "1.0",
+    "author": "Nietzs Le",
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "views/estate_property_views.xml",
+        "views/estate_property_type_views.xml",
+        "views/estate_property_tag_views.xml",
+        "views/estate_property_offer_views.xml",
+        "views/estate_menus.xml",
+    ],
+    "license": "LGPL-3",
+    "summary": "Estate app is application help you manage purchasing real estate for your business.",
+    "support": "nietzs.nhanle200@gmail.com",
+    "images": [
+        "static/description/img1.png",
+        "static/description/img2.png",
+        "static/description/img3.png",
+        "static/description/img4.png",
+    ],
+    "application": True,
+    "installable": True,
+}
